@@ -11,8 +11,9 @@ mongoose
   .catch(err => console.log(err));
   
 
-app.get("/", (req, res) => res.send("work please"));
-
+app.get("/", (req, res) => res.send("Hello World!!!"));
+app.use("/api/users", users);
+app.use("/api/tweets", tweets);
 
 
 const port = process.env.PORT || 5000;
